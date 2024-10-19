@@ -1,4 +1,6 @@
 a=[2,7,4,9,1]
+negativeinfinity=float('-inf')
+infinitypositive=float('inf')
 m=99
 sm=99
 for i in range(len(a)):
@@ -11,3 +13,8 @@ for i in range(len(a)):
             sm=a[i]
 print(sm)
         
+
+        # ---------------------------
+
+a=[2,7,4,9,1]
+
