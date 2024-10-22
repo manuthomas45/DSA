@@ -111,29 +111,29 @@ class LinkedList:
             current = current.next
         print("None")
 
-# Example usage:
-llist = LinkedList()
-llist.append(10)
-llist.append(20)
-llist.append(30)
-llist.append(40)
-llist.append(50)
+# # Example usage:
+# llist = LinkedList()
+# llist.append(10)
+# llist.append(20)
+# llist.append(30)
+# llist.append(40)
+# llist.append(50)
 
-print("Original List:")
-llist.print_list()
+# print("Original List:")
+# llist.print_list()
 
-print("Delete at beginning:")
-llist.delete_at_beginning()
-llist.print_list()
+# print("Delete at beginning:")
+# llist.delete_at_beginning()
+# llist.print_list()
 
-print("Delete at end:")
-llist.delete_at_end()
-llist.print_list()
+# print("Delete at end:")
+# llist.delete_at_end()
+# llist.print_list()
 
-print("Delete at position 1 (index):")
-llist.delete_at_position(1)
-llist.print_list()
+# print("Delete at position 1 (index):")
+# llist.delete_at_position(1)
+# llist.print_list()
 
-print("Delete at center:")
-llist.delete_at_center()
-llist.print_list()
+# print("Delete at center:")
+# llist.delete_at_center()
+# llist.print_list()
