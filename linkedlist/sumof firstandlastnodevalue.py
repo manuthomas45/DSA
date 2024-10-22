@@ -8,7 +8,7 @@ class Linkedlist:
     def append(self,data):
         new_node=Node(data)
         if self.head is None:
-            self.head=new_node
+            self.head = new_node
         else:
             last=self.head
             while last.next:
@@ -16,13 +16,22 @@ class Linkedlist:
             last.next=new_node
     def display(self):
         current=self.head
-        while  current:
-            print(current.data,end="->")
+        if current is None:
+            print("no nodes")
+        else:
+            while current:
+                print(current.data, end ="->")
+                current=current.next
+    def sum_of_node(self):
+        f=self.head.data
+        current=self.head
+        while current.next:
             current=current.next
-        print("None")
+        l=current.data
+        return f+l
 l=Linkedlist()
-# l.display()
-l.append(1)
-l.append(2)
-l.append(3)
+l.append(5)
+l.append(6)
+l.append(7)
 l.display()
+print(l.sum_of_node())
