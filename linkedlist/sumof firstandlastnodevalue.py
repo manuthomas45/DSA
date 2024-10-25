@@ -23,15 +23,19 @@ class Linkedlist:
                 print(current.data, end ="->")
                 current=current.next
     def sum_of_node(self):
+        m=0
         f=self.head.data
         current=self.head
         while current.next:
+            m+=current.data
             current=current.next
+        
         l=current.data
-        return f+l
+        return m+l
 l=Linkedlist()
 l.append(5)
 l.append(6)
+# l.append(6)
 l.append(7)
 l.display()
 print(l.sum_of_node())
