@@ -36,12 +36,12 @@ def build_product_tree():
     root.add_child(laptop)
     root.add_child(cellphone)
     root.add_child(tv)
-    # print(tv.get_level())
+    print(tv.get_level())
     return root
 
 if __name__=='__main__':
     root=build_product_tree()
-    # print(root.get_level())
+    print(root.get_level())
     root.print_tree()
     
    

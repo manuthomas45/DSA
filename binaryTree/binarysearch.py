@@ -5,10 +5,11 @@ class BinarySearchTreeNode:
         self.right=None
     def add_child(self,data):
         if data==self.data:
+            #bst doesnot contain duplicate value
             return
         if data<self.data:
             #add data in left subtree
-            if self.left:
+            if self.left:#check if it is a leaf node or not 
                 self.left.add_child(data)
             else:
                 self.left=BinarySearchTreeNode(data)
@@ -52,24 +53,29 @@ class BinarySearchTreeNode:
         if self.left is None:
             return self.data
         return self.left.find_min()
-    def delete(self,val):
-        if val<self.data:
-            if self.left:
-                self.left=self.left.delete(val)
-        elif val>self.data:
-            if self.right:
-                self.right=self.right.delete(val)
-        else:
-            if self.left is None and self.right is None:
-                return None
-            if self.left is None:
-                return self.right
-            if self.right is None:
-                return self.right
-            min_val=self.right.find_min()
-            self.data=min_val
-            self.right=self.right.delete(min_val)
-        return self
+    # def delete(self,val):
+    #     if val<self.data:
+    #         if self.left:
+    #             self.left=self.left.delete(val)
+    #     elif val>self.data:
+    #         if self.right:
+    #             self.right=self.right.delete(val)
+    #     else:
+    #         # when value find in the node then only it enteres to this section
+    #         # case1 : node at leafe node
+    #         if self.left is None and self.right is None:
+    #             return None
+    #         #case two node with one child if it may be left or right
+    #         if self.left is None:
+    #             return self.right
+    #         if self.right is None:
+    #             return self.left
+    #         #case3 node with 2 child
+    #         min_val=self.right.find_min()
+    #         self.data=min_val
+    #         self.right=self.right.delete(min_val)
+    #     return self
+  
             
     
 def build_tree(elements):
@@ -90,7 +96,7 @@ if __name__=='__main__':
    
     # print(country_tree.find_max())
     # print(country_tree.find_min())
-    number_tree=build_tree([17,4,1,9,20,9,23,18,34])
+    number_tree=build_tree([17,4,1,9,20,23,18,34])
     number_tree.delete(9)
     print(number_tree.in_order_traversal())
 

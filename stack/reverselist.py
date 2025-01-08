@@ -8,6 +8,7 @@
 # print(result)
 lst=[8247,928467,293487,76354]
 
+
 l=[]
 for i in lst:
     r=""
